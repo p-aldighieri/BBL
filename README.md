@@ -1,5 +1,5 @@
 # BBL
-Deployment of Bajari, Benkard &amp; Levin (2007) estimation algorithm
+Deployment of [Bajari, Benkard &amp; Levin (2007)](https://web.stanford.edu/~lanierb/research/Estimating_Dynamic_Models_EMA.pdf) estimation algorithm
 
 This project contains functions used to forward simulate first-stage value functions using the method proposed by Bajari, Benkard and Levin (2007). The method uses conditional choice probabilities --- not estimated here --- added to random private shocks to simulate firm choice in a dynamic discrete choice.
 
