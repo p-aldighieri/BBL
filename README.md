@@ -1,9 +1,11 @@
 # BBL
 Deployment of [Bajari, Benkard &amp; Levin (2007)](https://web.stanford.edu/~lanierb/research/Estimating_Dynamic_Models_EMA.pdf) estimation algorithm
 
-This project contains functions used to forward simulate first-stage value functions using the method proposed by Bajari, Benkard and Levin (2007). The method uses conditional choice probabilities --- not estimated here --- added to random private shocks to simulate firm choice in a dynamic discrete choice.
+This project contains functions used to forward simulate value functions using the method proposed by [Bajari, Benkard &amp; Levin (2007)](https://web.stanford.edu/~lanierb/research/Estimating_Dynamic_Models_EMA.pdf) to obtain parameter estimates for dynamic discrete choice models. 
 
-We build a very simple dynamic model with only two observed variables to analyse movie theater behavior in response to a screen quota policy. Details concerning the model are beyond the scope of this exposition. Suffice to say $x_t$ corresponds to the state variable and each $t$ represents a movie session for a movie theater in the year 2018. The algorithm works the following way (for each multiplex):
+In the first stage, agent behavior is simulated. The method uses conditional choice probabilities added to random private shocks to simulate choice/policy functions in a dynamic setting. Afterwars, in the second stage, we estimate structural parameters by chosing values that minimize a convex function increasing in equilibrium violations.
+
+We build a very simple dynamic model with only two observed variables to analyse movie theater behavior in response to a screen quota policy. Details concerning the model are beyond the scope of this intro. Suffice to say $x_t$ corresponds to the state variable and each $t$ represents a movie session for a movie theater in a given year. In brief, the algorithm works the following way (for each multiplex):
 1. At $t=1$, $x_1 = 0$. The algorithm gets week and day for $t=0$. With week information, it accesses all movies that were screened said week.
 1. Having movies, day and $x_t$ information, we get kernel density estimates for each movie according to day/$x_t$ pair. Densities of all movies are summed up, such that probabilities are given by densities relative to total. In the Logit cases, relevant observation attributes are plugged in the model to get a probability prediction.
 1. An extreme value error type I distribution is used to draw one shock for each movie.
