@@ -16,8 +16,12 @@ We build a very simple dynamic model with only two observed variables to analyse
 1. Finally, state transition is effected, according the state transition (known) function.
 1. Repeat steps $1-9$ until we reach terminal state $t=T$.
 
-Files:
-bbl.ipynb -- contains main and helper functions for first stage simulations/estimation
-BBL - 1st stage - sims.ipynb -- notebook to run first stage simulations
-BBL - 2nd state - minimization -- runs 2nd stage structural parameter estimation
+**Files summary**:
+
+bbl.ipynb -- contains main and helper functions for first stage simulations/estimation 
+
+BBL - 1st stage - sims.ipynb -- notebook to run first stage simulations 
+
+BBL - 2nd state - minimization -- runs 2nd stage structural parameter estimation 
+
 BBL - Logit CCPs.ipynb -- contains Logit model fits for 1st stage Conditional Choice Probabilities 
