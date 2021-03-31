@@ -1,7 +1,7 @@
 # BBL
 Deployment of [Bajari, Benkard &amp; Levin (2007)](https://web.stanford.edu/~lanierb/research/Estimating_Dynamic_Models_EMA.pdf) estimation algorithm
 
-This project contains functions used to forward simulate value functions using the method proposed by [Bajari, Benkard &amp; Levin (2007)](https://web.stanford.edu/~lanierb/research/Estimating_Dynamic_Models_EMA.pdf) to obtain parameter estimates for dynamic discrete choice models. 
+This project contains functions used to forward simulate value functions using the method proposed by [Bajari, Benkard &amp; Levin (2007)](https://web.stanford.edu/~lanierb/research/Estimating_Dynamic_Models_EMA.pdf) to obtain parameter estimates for dynamic discrete choice models. Administrative micro-level data used in the project, however, is not public and is not available in this repository.
 
 In the first stage, agent behavior is simulated. The method uses conditional choice probabilities added to random private shocks to simulate choice/policy functions in a dynamic setting. Afterwards, in the second stage, we estimate structural parameters by choosing values that minimize a convex function increasing in equilibrium violations.
 
