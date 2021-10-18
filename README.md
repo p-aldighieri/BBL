@@ -1,7 +1,7 @@
 # BBL
 Deployment of [Bajari, Benkard &amp; Levin (2007)](https://web.stanford.edu/~lanierb/research/Estimating_Dynamic_Models_EMA.pdf) estimation algorithm
 
-This project contains functions used to forward simulate value functions using the method proposed by [Bajari, Benkard &amp; Levin (2007)](https://web.stanford.edu/~lanierb/research/Estimating_Dynamic_Models_EMA.pdf) to obtain parameter estimates for dynamic discrete choice models. 
+This project contains functions used to forward simulate value functions using the method proposed by [Bajari, Benkard &amp; Levin (2007)](https://web.stanford.edu/~lanierb/research/Estimating_Dynamic_Models_EMA.pdf) to obtain parameter estimates for dynamic discrete choice models. Administrative micro-level data used in the project, however, is not public and is not available in this repository.
 
 In the first stage, agent behavior is simulated. The method uses conditional choice probabilities added to random private shocks to simulate choice/policy functions in a dynamic setting. Afterwards, in the second stage, we estimate structural parameters by choosing values that minimize a convex function increasing in equilibrium violations.
 
@@ -16,7 +16,7 @@ We build a very simple dynamic model with only two observed variables to analyse
 1. Finally, state transition is effected, according the state transition (known) function.
 1. Repeat steps $1-9$ until we reach terminal state $t=T$.
 
-**Files summary**:
+**Files description**:
 
 bbl.ipynb -- contains main and helper functions for first stage simulations/estimation 
 
@@ -25,3 +25,5 @@ BBL - 1st stage - sims.ipynb -- notebook to run first stage simulations
 BBL - 2nd state - minimization -- runs 2nd stage structural parameter estimation 
 
 BBL - Logit CCPs.ipynb -- contains Logit model fits for 1st stage Conditional Choice Probabilities 
+
+bbl.py -- same as notebook version, used to import in other scripts and get access to local functions
